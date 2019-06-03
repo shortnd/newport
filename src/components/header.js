@@ -2,21 +2,29 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import { rouge, gold, black } from "../helpers/colors"
+import Container from "./container"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `${black}`,
+      padding: `.9375rem 0`,
+      position: `relative`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        height: `.25rem`,
+        background: `${rouge}`,
+        position: `absolute`,
+        top: `0`,
+        left: `0`,
+        right: `0`
       }}
-    >
-      <h1 style={{ margin: 0 }}>
+    />
+    <Container>
+      <h1 style={{ margin: `.3125rem 0 0` }}>
         <Link
           to="/"
           style={{
@@ -27,7 +35,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </Container>
   </header>
 )
 
